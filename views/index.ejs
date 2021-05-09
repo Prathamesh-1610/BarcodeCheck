@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ProSaw Warranty check</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>ProSaw Warranty Number checking</h1>
+      </div>
+      <form style="margin:100px auto auto 50px;" class="" action="/" method="post">
+
+        <div class="row col-sm-4">
+          <input class="form-control " type="text" name="WarrantyNo" placeholder="Enter Warranty No here">
+        </div>
+
+        <div class="row">
+          <button class="btn btn-primary" style="margin-left:10px;" type="submit" name="button">Check Warranty</button>
+        </div>
+      </form>
+      <hr class="hr" style="border-top:3px solid green">
+      <div class="row" style="margin:100px auto auto 50px;">
+
+        <% if(proDetails==="Invalid Barcode") { %>
+          <b>This is an invalid Barcode, Please scan correct one</b>
+        <% } else {%>
+          <b>Product details </b><br><br><br>
+          <table border="1" style="width:100%">
+            <tr>
+              <th>Barcode</th>
+              <th>Product Name</th>
+            </tr>
+            <tr>
+              <td> <%= barCode %></td>
+              <td><%= proDetails %></td>
+            </tr>
+          </table>
+
+        <%}%>
+      </div>
+      <hr class="hr" style="border-top:3px solid green">
+
+    </div>
+
+
+
+
+
+  </body>
+</html>

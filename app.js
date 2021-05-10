@@ -38,6 +38,6 @@ res.redirect("/");
 
 });
 
-app.listen(4000, function(){
+app.listen(process.env.PORT||4000, function(){
   console.log("Server is ruuning");
 });
